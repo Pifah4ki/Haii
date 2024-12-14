@@ -3,49 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>This is 4 u</title>
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Hi There</title>
     <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: 'Quicksand', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            margin: 0;
-            background-color: #fff9e6;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+            font-family: 'Arial', sans-serif;
             color: #333;
+            animation: gradient 10s ease infinite;
+            background-size: 400% 400%;
+        }
+
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .card {
+            background: #fff;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            max-width: 400px;
             text-align: center;
+            overflow: hidden;
+            animation: slideIn 1s ease;
         }
-        .container {
-            max-width: 600px;
+
+        @keyframes slideIn {
+            0% {
+                transform: translateY(100%);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            background: #f57c00;
+            color: #fff;
+            padding: 15px;
+            font-size: 1.5rem;
+        }
+
+        .content {
             padding: 20px;
-            background: white;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border-radius: 16px;
-            border: 2px dashed #ffb347;
+            line-height: 1.8;
+            font-size: 1.1rem;
         }
-        p {
-            margin: 15px 0;
-            font-size: 1.2em;
-            line-height: 1.6;
-        }
+
         .emoji {
-            font-size: 1.8em;
-        }
-        h1 {
-            font-family: 'Pacifico', cursive;
-            font-size: 2em;
-            margin-bottom: 20px;
-            color: #ff7043;
+            font-size: 1.8rem;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Haiiii</h1>
-        <p>Senang sekali bisa mendengarnya..</p>
-        <p>Walaupun kata² tersebut tidak tertuju untukku<span class="emoji">🙂</span></p>
+    <div class="card">
+        <div class="header">Hi there.. what's up? 😀</div>
+        <div class="content">
+            I hope you're well, ya??<br>
+            <em>Yaa well lah pasti wong skrg wes ada yg nemeni😅</em><br>
+            <br>
+            Gimana perasaannya bisa ngerasain <strong>butterfly era</strong> lagi? Seneng aja atau seneng banget??<br>
+            <br>
+            Eh btw kamu tau ga??<br>
+            Setiap kamu bikin <strong>sw</strong>, aku selalu baper tauukk.. pdhl yo jelas² itu bkn buat akuu wakakakkakk.. konyol kan'?<br>
+            <br>
+            Wess gapapa.. aku bahagia klo kamu bahagia😉<br>
+            Sehat-sehat terus yaa😎
+            <div class="emoji">💙✨</div>
+        </div>
     </div>
 </body>
 </html>
